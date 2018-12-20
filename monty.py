@@ -9,7 +9,11 @@ def runGameTrickyHost(strategy):
         doors.remove(playerChoice)
     
     #hostChoice = random.choice(doors)
-    hostChoice = doors[0]
+    if 1 in doors:
+        hostChoice = 1
+    else:
+        hostChoice = doors[0]
+
     remainingDoors = [1,2,3]
     remainingDoors.remove(hostChoice)
     finalChoice = playerChoice
